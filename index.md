@@ -6,21 +6,14 @@ layout: home
 
 # Répertoire de contenu
 
-Les liens hypertexte vers chaque exercice et démonstration de labo sont répertoriés ci-dessous.
+Les exemples de fichiers sont utilisés par deux simulations dans le module d’exercice publié sur Microsoft Learn, comme indiqué ci-dessous.
 
-## Laboratoires
+### exemples de fichiers
+</br>
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
-| Module | Laboratoire |
-| --- | --- | 
-{% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
-
-## Démonstrations
-
-{% assign demos = site.pages | where_exp:"page", "page.url contains ’/Instructions/Demos’" %}
-| Module | Démonstration |
-| --- | --- | 
-{% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
+| Module | Unité (simulation) | SampleFile |
+| --- | --- | --- |
+| Explorer les cas d’usage de Microsoft Security Copilot | Activer un plug-in personnalisé | KQL_DefenderExample.yaml |
+| Explorer les cas d’usage de Microsoft Security Copilot | Découvrir les chargements de fichiers via une base de connaissances | Politique de gestion des données d’entreprise de Woodgrove.docx |
+| Explorer les cas d’usage de Microsoft Security Copilot | Découvrir les chargements de fichiers via une base de connaissances | Woodgrove Corporate Data Handling Policy.pdf |
 
